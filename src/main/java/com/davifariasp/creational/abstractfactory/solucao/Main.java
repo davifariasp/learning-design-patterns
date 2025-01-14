@@ -2,6 +2,7 @@ package com.davifariasp.creational.abstractfactory.solucao;
 
 import com.davifariasp.creational.abstractfactory.solucao.factorys.ElfFactory;
 import com.davifariasp.creational.abstractfactory.solucao.factorys.OrcFactory;
+import com.davifariasp.creational.abstractfactory.solucao.interfaces.FactionFactory;
 
 import java.util.Scanner;
 
@@ -17,18 +18,14 @@ public class Main {
         // Lê a entrada do usuário como uma String
         int factionType = Integer.parseInt(scanner.nextLine());
 
-        switch (factionType) {
-            case 1:
-                RPGGame game = new RPGGame(new ElfFactory());
-                game.spawnEntities();
-                break;
-            case 2:
-                RPGGame game2 = new RPGGame(new OrcFactory());
-                game2.spawnEntities();
-                break;
-            default:
-                throw new IllegalArgumentException("Facção inválida");
-        }
+        FactionFactory factionFactory = switch (factionType) {
+            case 1 -> new ElfFactory();
+            case 2 -> new OrcFactory();
+            default -> throw new IllegalArgumentException("Facção inválida");
+        };
+
+        RPGGame game = new RPGGame(factionFactory);
+        game.spawnEntities();
 
     }
 }
