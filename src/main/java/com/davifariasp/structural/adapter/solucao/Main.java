@@ -1,14 +1,12 @@
-package com.davifariasp.structural.adapter.problema;
+package com.davifariasp.structural.adapter.solucao;
 
 public class Main {
     public static void main(String[] args) {
-        Notify notify = new Notify("Title", "Message");
 
         LegacyNotifier legacyNotifier = new LegacyNotifier();
 
-        notify.sendNotification();
+        NotificationAdapter notificationAdapter = new NotificationAdapter(legacyNotifier);
 
-        legacyNotifier.sedNotification("Mensagem");
-
+        notificationAdapter.notify("Title", "Message");
     }
 }

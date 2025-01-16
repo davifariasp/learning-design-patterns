@@ -1,4 +1,4 @@
-package com.davifariasp.structural.adapter.solucao;
+package com.davifariasp.structural.adapter.problema;
 
 public class LegacyNotifier {
 
