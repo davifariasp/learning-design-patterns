@@ -1,6 +1,6 @@
 package com.davifariasp.creational.factorymethod.solucao;
 
-public class SavingsAccount implements IBankAccount {
+public class SavingsAccount implements BankAccount {
 
     @Override
     public void processTransaction() {

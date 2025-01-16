@@ -14,7 +14,7 @@ public class Main {
         // Lê a entrada do usuário como uma String
         int accountType = Integer.parseInt(scanner.nextLine());
 
-        IBankAccount account = BankAccountFactory.createAccount(accountType);
+        BankAccount account = BankAccountFactory.createAccount(accountType);
 
         //chama o método para processar transação
         account.processTransaction();
