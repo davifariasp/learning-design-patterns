@@ -1,14 +1,19 @@
 # Abstract Factory
 
+O Abstract Factory é um padrão de projeto criacional que permite que você produza famílias de objetos relacionados sem ter que especificar suas classes concretas.
+
+
+## Exemplo
+
 Jogo de RPG com Criaturas e Itens por Fação
 
-## Problema
+### Problema
 
 Imagine que você está desenvolvendo um jogo de RPG com diferentes facções (ex.: Elfos e Orcs). Cada facção tem suas próprias criaturas e itens especiais.
 
 No código atual, você verifica a facção do jogador e cria objetos (criaturas e itens) de forma manual, com várias condições (if/else ou switch). Isso dificulta adicionar novas facções ou alterar os comportamentos.
 
-## Solução
+### Solução
 
 Podemos refatorar esse código para usar o padrão Abstract Factory, tornando o jogo mais flexível e modular.
 
